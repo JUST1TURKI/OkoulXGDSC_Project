@@ -4,7 +4,7 @@
 
 ## About the application
 <img width="200" alt="image" src="https://user-images.githubusercontent.com/117861968/221232369-13370e12-9deb-4c95-96f5-9d124b62d0f0.png">
-![image](https://user-images.githubusercontent.com/117861968/221232413-f860c297-7637-4bee-a62b-fe052200f432.png)
+<img width="200" alt="image" src="https://user-images.githubusercontent.com/117861968/221233088-7174a13b-f1b3-48f1-9184-ee6b00e162e6.png">
 
 
 This project is a starting point for a Flutter application.
