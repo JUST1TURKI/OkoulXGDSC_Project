@@ -1,8 +1,11 @@
-# flutter_application_1
+# Okoul X GDSC Project
 
-A new Flutter project.
+تطبيق مصلى لتحديد موعد اذان الصلوات حسب منطقتك بالاضافة الى مزايا اخرى مثل الاذكار والادعية
 
-## Getting Started
+## About the application
+<img width="200" alt="image" src="https://user-images.githubusercontent.com/117861968/221232369-13370e12-9deb-4c95-96f5-9d124b62d0f0.png">
+<img width="200" alt="image" src="https://user-images.githubusercontent.com/117861968/221233088-7174a13b-f1b3-48f1-9184-ee6b00e162e6.png">
+
 
 This project is a starting point for a Flutter application.
 
