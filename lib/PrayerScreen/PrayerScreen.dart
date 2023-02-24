@@ -1,4 +1,4 @@
-// ignore_for_file: unnecessary_import, depend_on_referenced_packages, library_private_types_in_public_api, file_names, unnecessary_string_interpolations
+// ignore_for_file: unnecessary_import, depend_on_referenced_packages, library_private_types_in_public_api, file_names, unnecessary_string_interpolations, unused_import
 import 'package:flutter_application_1/Register.dart';
 import 'package:intl/intl.dart';
 import 'dart:convert';
@@ -206,7 +206,8 @@ class _MainScreen extends State<MainScreen> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                TimerBuilder.periodic(Duration(seconds: 1), builder: (context) {
+                TimerBuilder.periodic(const Duration(seconds: 1),
+                    builder: (context) {
                   return Text(
                     "${getSystemTime()}",
                     style: const TextStyle(
@@ -303,7 +304,7 @@ class _MainScreen extends State<MainScreen> {
           });
         },
         backgroundColor: Colors.brown,
-        foregroundColor: Color.fromARGB(255, 33, 33, 33),
+        foregroundColor: const Color.fromARGB(255, 33, 33, 33),
         child: const Icon(
           Icons.login_outlined,
           size: 30,
