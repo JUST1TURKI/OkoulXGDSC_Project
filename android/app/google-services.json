@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "702351217753",
+    "project_id": "pushnotificationsokoul",
+    "storage_bucket": "pushnotificationsokoul.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:702351217753:android:87ad0282eabdc4e18e8d48",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "702351217753-lsu9go4km9ga9lnnbb67q9d8g54319mn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBF_6RAY_1VfVa6MSl97QwvBkcbUpx_tsQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "702351217753-lsu9go4km9ga9lnnbb67q9d8g54319mn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
