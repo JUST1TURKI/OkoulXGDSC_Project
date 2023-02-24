@@ -1,5 +1,6 @@
-// ignore_for_file: unnecessary_import, depend_on_referenced_packages, library_private_types_in_public_api, file_names
-
+// ignore_for_file: unnecessary_import, depend_on_referenced_packages, library_private_types_in_public_api, file_names, unnecessary_string_interpolations
+import 'package:flutter_application_1/Register.dart';
+import 'package:intl/intl.dart';
 import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -8,6 +9,8 @@ import 'package:flutter_application_1/PrayerScreen/dhaa.dart';
 import 'package:http/http.dart' as http;
 import '../Data\'s/JSON.dart';
 import '../Data\'s/data.dart';
+import 'package:slide_digital_clock/slide_digital_clock.dart';
+import 'package:timer_builder/timer_builder.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -42,6 +45,12 @@ class _MainScreen extends State<MainScreen> {
     return list;
   }
 
+  final String currentTime = getSystemTime();
+
+  static getSystemTime() {
+    return DateFormat.jms().format(DateTime.now());
+  }
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -52,7 +61,7 @@ class _MainScreen extends State<MainScreen> {
           Row(
             children: [
               Container(
-                height: size.height * 0.78,
+                height: size.height * 0.75,
                 width: size.width * 0.65,
                 decoration: const BoxDecoration(
                     boxShadow: [
@@ -196,13 +205,25 @@ class _MainScreen extends State<MainScreen> {
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
-              children: const [
+              children: [
+                TimerBuilder.periodic(Duration(seconds: 1), builder: (context) {
+                  return Text(
+                    "${getSystemTime()}",
+                    style: const TextStyle(
+                      color: Colors.black,
+                      fontSize: 40,
+                      fontWeight: FontWeight.w700,
+                      fontFamily: 'Rakkas',
+                    ),
+                  );
+                }),
+                // ignore: prefer_const_constructors
                 Align(
-                  child: Text(
-                    'مصلى',
+                  child: const Text(
+                    '    مصلى',
                     style: TextStyle(fontSize: 60, fontFamily: "Rakkas"),
                   ),
-                ),
+                )
               ],
             ),
           ),
@@ -210,7 +231,7 @@ class _MainScreen extends State<MainScreen> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Container(
-                margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 1),
+                margin: const EdgeInsets.symmetric(horizontal: 30, vertical: 1),
                 child: ElevatedButton(
                   onPressed: () {
                     setState(() {
@@ -273,6 +294,20 @@ class _MainScreen extends State<MainScreen> {
             ],
           ),
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          setState(() {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const Register()));
+          });
+        },
+        backgroundColor: Colors.brown,
+        foregroundColor: Color.fromARGB(255, 33, 33, 33),
+        child: const Icon(
+          Icons.login_outlined,
+          size: 30,
+        ),
       ),
     );
   }
