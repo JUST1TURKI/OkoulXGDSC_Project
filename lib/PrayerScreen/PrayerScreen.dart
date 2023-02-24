@@ -221,7 +221,7 @@ class _MainScreen extends State<MainScreen> {
                 // ignore: prefer_const_constructors
                 Align(
                   child: const Text(
-                    '    مصلى',
+                    '  مصلى',
                     style: TextStyle(fontSize: 60, fontFamily: "Rakkas"),
                   ),
                 )

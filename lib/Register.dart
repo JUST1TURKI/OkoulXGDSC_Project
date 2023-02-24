@@ -63,19 +63,17 @@ class _HomeState extends State<Home> {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: ExactAssetImage('assets/images/loginBackGround.jpg'),
+            image: ExactAssetImage('assets/images/loginPage.jpg'),
             fit: BoxFit.cover,
           ),
         ),
-        child: Center(
+        child: Container(
+          alignment: Alignment.bottomCenter,
           child: Form(
               key: _formKey,
               child: SingleChildScrollView(
                 child: Column(
                   children: [
-                    const SizedBox(
-                      height: 270,
-                    ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: TextFormField(
@@ -87,10 +85,11 @@ class _HomeState extends State<Home> {
                           hintText: 'ادخل ايميلك الشخصي',
                           hintTextDirection: TextDirection.rtl,
                           focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(
-                              color: Color(0xFF2D380C),
-                            ),
-                          ),
+                              borderSide: BorderSide(
+                                color: Color(0xFF2D380C),
+                              ),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(5))),
                         ),
                         keyboardType: TextInputType.emailAddress,
                         validator: (val) {
