@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_import, depend_on_referenced_packages, library_private_types_in_public_api, file_names
+
 import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -8,7 +10,7 @@ import '../Data\'s/JSON.dart';
 import '../Data\'s/data.dart';
 
 class MainScreen extends StatefulWidget {
-  MainScreen({Key? key}) : super(key: key);
+  const MainScreen({Key? key}) : super(key: key);
 
   @override
   _MainScreen createState() => _MainScreen();
@@ -21,7 +23,7 @@ class _MainScreen extends State<MainScreen> {
     getPTData();
   }
 
-  JsonConnection jsonConnection = new JsonConnection();
+  JsonConnection jsonConnection = JsonConnection();
 
   late Data list;
 
@@ -212,8 +214,10 @@ class _MainScreen extends State<MainScreen> {
                 child: ElevatedButton(
                   onPressed: () {
                     setState(() {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => dhaa()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const dhaa()));
                     });
                   },
                   // ignore: sort_child_properties_last
@@ -240,8 +244,10 @@ class _MainScreen extends State<MainScreen> {
               ElevatedButton(
                 onPressed: () {
                   setState(() {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Adhkar()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Adhkar()));
                   });
                 },
                 // ignore: sort_child_properties_last
@@ -253,7 +259,7 @@ class _MainScreen extends State<MainScreen> {
                   ),
                 ),
                 style: ElevatedButton.styleFrom(
-                    backgroundColor: Color.fromARGB(255, 228, 183, 22),
+                    backgroundColor: const Color.fromARGB(255, 228, 183, 22),
                     foregroundColor: Colors.black,
                     padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                     elevation: 10,

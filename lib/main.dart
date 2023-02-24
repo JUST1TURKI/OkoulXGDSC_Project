@@ -1,9 +1,17 @@
-// ignore_for_file: avoid_print
+// ignore_for_file: avoid_print, depend_on_referenced_packages, unused_import
 
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/PrayerScreen/dhaa.dart';
 import 'package:flutter_application_1/Register.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:flutter_application_1/adhkar/adkarMasa.dart';
+import 'package:flutter_application_1/adhkar/adkarSabah.dart';
+import 'package:flutter_application_1/dhaa/arkNafsek.dart';
+import 'package:flutter_application_1/dhaa/arkkherk.dart';
+import 'package:flutter_application_1/dhaa/wrd.dart';
+import 'PrayerScreen/Adhkar.dart';
+import 'PrayerScreen/PrayerScreen.dart';
 import 'SplashScreen.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -27,17 +35,29 @@ class _Home extends State<InfoPage> {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         routes: {
-          '/a': (ctx) => Home(),
-          '/b': (ctx) => SplashPage(),
-          '/c': (ctx) => const Register()
+          '/a': (ctx) => const Home(),
+          '/b': (ctx) => const SplashPage(),
+          '/c': (ctx) => const Register(),
+          '/d': (ctx) => const MainScreen(),
+          '/e': (ctx) => const SplashPage(),
+          '/f': (ctx) => const dhaa(),
+          '/g': (ctx) => const Adhkar(),
+          '/h': (ctx) => const arkkherk(),
+          '/i': (ctx) => const arkNafsek(),
+          '/j': (ctx) => const wrd(),
+          '/k': (ctx) => const adkarMasa(),
+          '/l': (ctx) => const adkarSabah(),
         },
-        home: Home() //create new class for 'home' property of MaterialApp()
+        home:
+            const Home() //create new class for 'home' property of MaterialApp()
         //to escape 'No MaterialLocalizations found' error
         );
   }
 }
 
 class Home extends StatefulWidget {
+  const Home({super.key});
+
   @override
   State<Home> createState() => _HomeState();
 }
@@ -190,10 +210,6 @@ class _HomeState extends State<Home> {
                   onPressed: () {
                     Navigator.of(ctx).pushNamed('/b');
                   },
-                  child: const Text(
-                    "تخط و ابدا",
-                    style: TextStyle(fontFamily: 'Rakkas', fontSize: 20),
-                  ),
                   style: ElevatedButton.styleFrom(
                       backgroundColor: const Color.fromRGBO(76, 61, 8, 1),
                       padding: const EdgeInsets.all(8),
@@ -204,6 +220,10 @@ class _HomeState extends State<Home> {
                           bottomRight: Radius.circular(20),
                         ),
                       )),
+                  child: const Text(
+                    "تخط و ابدا",
+                    style: TextStyle(fontFamily: 'Rakkas', fontSize: 20),
+                  ),
                 ),
               ),
             ),
@@ -230,7 +250,8 @@ class Data {
 
 class Indicator extends StatelessWidget {
   final int index;
-  Indicator(this.index);
+  // ignore: prefer_const_constructors_in_immutables
+  Indicator(this.index, {super.key});
 
   @override
   Widget build(BuildContext context) {

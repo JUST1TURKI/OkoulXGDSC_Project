@@ -12,10 +12,11 @@ class dhaa extends StatefulWidget {
   State<dhaa> createState() => _dhaa();
 }
 
+// ignore: camel_case_types
 class _dhaa extends State<dhaa> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Home() //create new class for 'home' property of MaterialApp()
         //to escape 'No MaterialLocalizations found' error
@@ -24,6 +25,8 @@ class _dhaa extends State<dhaa> {
 }
 
 class Home extends StatefulWidget {
+  const Home({super.key});
+
   @override
   State<Home> createState() => _HomeState();
 }
@@ -69,7 +72,7 @@ class _HomeState extends State<Home> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => MainScreen()));
+                              builder: (context) => const MainScreen()));
                     });
                   },
                   icon: const Icon(
@@ -84,17 +87,19 @@ class _HomeState extends State<Home> {
             children: [
               Container(
                 width: double.infinity,
-                margin: EdgeInsets.all(10),
+                margin: const EdgeInsets.all(10),
                 child: ElevatedButton(
                   onPressed: () {
                     setState(() {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => arkNafsek()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const arkNafsek()));
                     });
                   },
                   style: ElevatedButton.styleFrom(
                       backgroundColor: const Color.fromRGBO(108, 87, 12, 1),
-                      padding: EdgeInsets.all(8),
+                      padding: const EdgeInsets.all(8),
                       elevation: 10,
                       shape: const RoundedRectangleBorder(
                         borderRadius: BorderRadius.only(
@@ -119,13 +124,15 @@ class _HomeState extends State<Home> {
                 child: ElevatedButton(
                   onPressed: () {
                     setState(() {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => arkkherk()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const arkkherk()));
                     });
                   },
                   style: ElevatedButton.styleFrom(
                       backgroundColor: const Color.fromRGBO(108, 87, 12, 1),
-                      padding: EdgeInsets.all(8),
+                      padding: const EdgeInsets.all(8),
                       elevation: 10,
                       shape: const RoundedRectangleBorder(
                         borderRadius: BorderRadius.only(
@@ -151,12 +158,12 @@ class _HomeState extends State<Home> {
                   onPressed: () {
                     setState(() {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => wrd()));
+                          MaterialPageRoute(builder: (context) => const wrd()));
                     });
                   },
                   style: ElevatedButton.styleFrom(
                       backgroundColor: const Color.fromRGBO(108, 87, 12, 1),
-                      padding: EdgeInsets.all(8),
+                      padding: const EdgeInsets.all(8),
                       elevation: 10,
                       shape: const RoundedRectangleBorder(
                         borderRadius: BorderRadius.only(

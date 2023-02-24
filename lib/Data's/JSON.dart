@@ -1,3 +1,5 @@
+// ignore_for_file: file_names, depend_on_referenced_packages
+
 import 'dart:convert';
 import 'dart:async';
 import 'package:http/http.dart' as http;
@@ -23,7 +25,7 @@ class JsonConnection {
 
     final data = jsonDecode(response.body);
 
-    list = new Data.fromJson(data);
+    list = Data.fromJson(data);
 
     return list;
   }

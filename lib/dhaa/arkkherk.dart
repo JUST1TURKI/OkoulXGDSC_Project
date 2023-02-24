@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types
+
 import 'package:flutter/material.dart';
 
 import '../PrayerScreen/dhaa.dart';
@@ -12,7 +14,7 @@ class arkkherk extends StatefulWidget {
 class _arkkherk extends State<arkkherk> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Home() //create new class for 'home' property of MaterialApp()
         //to escape 'No MaterialLocalizations found' error
@@ -21,6 +23,8 @@ class _arkkherk extends State<arkkherk> {
 }
 
 class Home extends StatefulWidget {
+  const Home({super.key});
+
   @override
   State<Home> createState() => _HomeState();
 }
@@ -30,7 +34,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 254, 243, 227),
+      backgroundColor: const Color.fromARGB(255, 254, 243, 227),
       body: GridView(
           gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
             maxCrossAxisExtent: 400,
@@ -63,8 +67,10 @@ class _HomeState extends State<Home> {
                   child: IconButton(
                     onPressed: () {
                       setState(() {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => dhaa()));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const dhaa()));
                       });
                     },
                     icon: const Icon(
@@ -88,13 +94,13 @@ class _HomeState extends State<Home> {
               child: Column(
                 // ignore: prefer_const_literals_to_create_immutables
                 children: [
-                  Icon(Icons.layers),
+                  const Icon(Icons.layers),
                   const Text(
                     'بسم الله أرقيك، من كل شيءٍ يؤذيك، من شرّ كلّ نفسٍ أو عين حاسدٍ الله يشفيك، بسم الله أرقيك',
                     style: TextStyle(fontSize: 20),
                     textAlign: TextAlign.center,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   const Text(
@@ -102,7 +108,7 @@ class _HomeState extends State<Home> {
                     style: TextStyle(fontSize: 20),
                     textAlign: TextAlign.center,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   const Text(
@@ -110,7 +116,7 @@ class _HomeState extends State<Home> {
                     style: TextStyle(fontSize: 20),
                     textAlign: TextAlign.center,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   const Text(
@@ -118,7 +124,7 @@ class _HomeState extends State<Home> {
                     style: TextStyle(fontSize: 20),
                     textAlign: TextAlign.center,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                 ],

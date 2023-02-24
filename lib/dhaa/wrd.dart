@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types
+
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/PrayerScreen/dhaa.dart';
 
@@ -11,7 +13,7 @@ class wrd extends StatefulWidget {
 class _wrd extends State<wrd> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Home() //create new class for 'home' property of MaterialApp()
         //to escape 'No MaterialLocalizations found' error
@@ -20,6 +22,8 @@ class _wrd extends State<wrd> {
 }
 
 class Home extends StatefulWidget {
+  const Home({super.key});
+
   @override
   State<Home> createState() => _HomeState();
 }
@@ -29,7 +33,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 254, 243, 227),
+      backgroundColor: const Color.fromARGB(255, 254, 243, 227),
       body: GridView(
           gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
             maxCrossAxisExtent: 400,
@@ -62,8 +66,10 @@ class _HomeState extends State<Home> {
                   child: IconButton(
                     onPressed: () {
                       setState(() {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => dhaa()));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const dhaa()));
                       });
                     },
                     icon: const Icon(
@@ -87,13 +93,13 @@ class _HomeState extends State<Home> {
               child: Column(
                 // ignore: prefer_const_literals_to_create_immutables
                 children: [
-                  Icon(Icons.layers),
+                  const Icon(Icons.layers),
                   const Text(
                     'قُلْ هُوَ اللَّهُ أَحَدٌ، اللَّهُ الصَّمَدُ، لَمْ يَلِدْ وَلَمْ يُولَدْ، وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ',
                     style: TextStyle(fontSize: 20),
                     textAlign: TextAlign.center,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   const Text(
@@ -101,7 +107,7 @@ class _HomeState extends State<Home> {
                     style: TextStyle(fontSize: 20),
                     textAlign: TextAlign.center,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   const Text(
@@ -109,7 +115,7 @@ class _HomeState extends State<Home> {
                     style: TextStyle(fontSize: 20),
                     textAlign: TextAlign.center,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   const Text(

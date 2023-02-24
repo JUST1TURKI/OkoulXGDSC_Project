@@ -1,3 +1,5 @@
+// ignore_for_file: library_private_types_in_public_api, depend_on_referenced_packages, unused_import, file_names
+
 import 'package:easy_splash_screen/easy_splash_screen.dart';
 import 'package:flutter_application_1/main.dart';
 import 'package:flutter/material.dart';

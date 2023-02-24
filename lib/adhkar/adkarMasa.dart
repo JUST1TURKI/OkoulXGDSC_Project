@@ -1,3 +1,5 @@
+// ignore_for_file: file_names, camel_case_types
+
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/PrayerScreen/Adhkar.dart';
 
@@ -11,7 +13,7 @@ class adkarMasa extends StatefulWidget {
 class _adkarMasa extends State<adkarMasa> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Home() //create new class for 'home' property of MaterialApp()
         //to escape 'No MaterialLocalizations found' error
@@ -20,6 +22,8 @@ class _adkarMasa extends State<adkarMasa> {
 }
 
 class Home extends StatefulWidget {
+  const Home({super.key});
+
   @override
   State<Home> createState() => _HomeState();
 }
@@ -29,7 +33,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 254, 243, 227),
+      backgroundColor: const Color.fromARGB(255, 254, 243, 227),
       body: GridView(
           gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
             maxCrossAxisExtent: 400,
@@ -62,8 +66,10 @@ class _HomeState extends State<Home> {
                   child: IconButton(
                     onPressed: () {
                       setState(() {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => Adhkar()));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Adhkar()));
                       });
                     },
                     icon: const Icon(
@@ -87,13 +93,13 @@ class _HomeState extends State<Home> {
               child: Column(
                 // ignore: prefer_const_literals_to_create_immutables
                 children: [
-                  Icon(Icons.layers),
+                  const Icon(Icons.layers),
                   const Text(
                     'أَمْسَيْـنا وَأَمْسـى المـلكُ لله وَالحَمدُ لله ، لا إلهَ إلاّ اللّهُ وَحدَهُ لا شَريكَ لهُ، لهُ المُـلكُ ولهُ الحَمْـد، وهُوَ على كلّ شَيءٍ قدير ، رَبِّ أسْـأَلُـكَ خَـيرَ ما في هـذهِ اللَّـيْلَةِ وَخَـيرَ ما بَعْـدَهـا ، وَأَعـوذُ بِكَ مِنْ شَـرِّ ما في هـذهِ اللَّـيْلةِ وَشَرِّ ما بَعْـدَهـا ، ',
                     style: TextStyle(fontSize: 20),
                     textAlign: TextAlign.center,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   const Text(

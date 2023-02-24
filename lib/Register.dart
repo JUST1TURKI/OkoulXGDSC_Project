@@ -1,3 +1,6 @@
+// ignore: file_names
+// ignore_for_file: constant_identifier_names, prefer_final_fields, unused_field, avoid_print, file_names, duplicate_ignore
+
 import 'package:flutter/material.dart';
 import 'PrayerScreen/PrayerScreen.dart';
 
@@ -11,7 +14,7 @@ class Register extends StatefulWidget {
 class _Register extends State<Register> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Home() //create new class for 'home' property of MaterialApp()
         //to escape 'No MaterialLocalizations found' error
@@ -20,6 +23,8 @@ class _Register extends State<Register> {
 }
 
 class Home extends StatefulWidget {
+  const Home({super.key});
+
   @override
   State<Home> createState() => _HomeState();
 }
@@ -160,7 +165,7 @@ class _HomeState extends State<Home> {
                               : null,
                         ),
                       ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     ElevatedButton(
@@ -169,7 +174,7 @@ class _HomeState extends State<Home> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => MainScreen()));
+                                  builder: (context) => const MainScreen()));
                         });
                       },
                       // ignore: sort_child_properties_last
@@ -187,7 +192,8 @@ class _HomeState extends State<Home> {
                         ),
                       ),
                       style: ElevatedButton.styleFrom(
-                          backgroundColor: Color.fromRGBO(125, 101, 13, 1),
+                          backgroundColor:
+                              const Color.fromRGBO(125, 101, 13, 1),
                           foregroundColor: Colors.black,
                           padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
                           elevation: 5,
@@ -200,7 +206,7 @@ class _HomeState extends State<Home> {
                     ),
                     MaterialButton(
                       onPressed: _switchAuthMode,
-                      padding: EdgeInsets.all(10),
+                      padding: const EdgeInsets.all(10),
                       child: Text(
                         '${_authMode == AuthMode.Login ? 'ماعندك حساب؟ انضم لنا' : 'سجل دخولك  '} ',
                         style: const TextStyle(
@@ -216,11 +222,11 @@ class _HomeState extends State<Home> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => MainScreen()));
+                                  builder: (context) => const MainScreen()));
                         });
                       },
                       child: Padding(
-                        padding: EdgeInsets.all(10.0),
+                        padding: const EdgeInsets.all(10.0),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: const [
