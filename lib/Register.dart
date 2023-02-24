@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/PrayerScreen.dart';
-
-void main() {
-  runApp(const Register());
-}
+import 'PrayerScreen/PrayerScreen.dart';
 
 class Register extends StatefulWidget {
   const Register({super.key});

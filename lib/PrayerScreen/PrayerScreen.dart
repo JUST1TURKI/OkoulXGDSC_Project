@@ -1,11 +1,11 @@
 import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Adhkar.dart';
-import 'package:flutter_application_1/dhaa.dart';
+import 'package:flutter_application_1/PrayerScreen/Adhkar.dart';
+import 'package:flutter_application_1/PrayerScreen/dhaa.dart';
 import 'package:http/http.dart' as http;
-import 'package:flutter_application_1/data.dart';
-import 'JSON.dart';
+import '../Data\'s/JSON.dart';
+import '../Data\'s/data.dart';
 
 class MainScreen extends StatefulWidget {
   MainScreen({Key? key}) : super(key: key);

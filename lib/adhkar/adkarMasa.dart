@@ -1,19 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/PrayerScreen/Adhkar.dart';
 
-import 'dhaa.dart';
-
-void main() {
-  runApp(const arkkherk());
-}
-
-class arkkherk extends StatefulWidget {
-  const arkkherk({super.key});
+class adkarMasa extends StatefulWidget {
+  const adkarMasa({super.key});
 
   @override
-  State<arkkherk> createState() => _arkkherk();
+  State<adkarMasa> createState() => _adkarMasa();
 }
 
-class _arkkherk extends State<arkkherk> {
+class _adkarMasa extends State<adkarMasa> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -68,7 +63,7 @@ class _HomeState extends State<Home> {
                     onPressed: () {
                       setState(() {
                         Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => dhaa()));
+                            MaterialPageRoute(builder: (context) => Adhkar()));
                       });
                     },
                     icon: const Icon(
@@ -81,7 +76,7 @@ class _HomeState extends State<Home> {
                   padding: const EdgeInsets.only(top: 70),
                   margin: const EdgeInsets.only(top: 70),
                   child: const Text(
-                    'ارق غيرك',
+                    'اذكار المساء',
                     style: TextStyle(fontFamily: 'Rakkas', fontSize: 60),
                   ),
                 ),
@@ -94,7 +89,7 @@ class _HomeState extends State<Home> {
                 children: [
                   Icon(Icons.layers),
                   const Text(
-                    'بسم الله أرقيك، من كل شيءٍ يؤذيك، من شرّ كلّ نفسٍ أو عين حاسدٍ الله يشفيك، بسم الله أرقيك',
+                    'أَمْسَيْـنا وَأَمْسـى المـلكُ لله وَالحَمدُ لله ، لا إلهَ إلاّ اللّهُ وَحدَهُ لا شَريكَ لهُ، لهُ المُـلكُ ولهُ الحَمْـد، وهُوَ على كلّ شَيءٍ قدير ، رَبِّ أسْـأَلُـكَ خَـيرَ ما في هـذهِ اللَّـيْلَةِ وَخَـيرَ ما بَعْـدَهـا ، وَأَعـوذُ بِكَ مِنْ شَـرِّ ما في هـذهِ اللَّـيْلةِ وَشَرِّ ما بَعْـدَهـا ، ',
                     style: TextStyle(fontSize: 20),
                     textAlign: TextAlign.center,
                   ),
@@ -102,28 +97,9 @@ class _HomeState extends State<Home> {
                     height: 10,
                   ),
                   const Text(
-                    'بسم الله الذي لا يضر مع اسمه شيءٌ في الأرض ولا في السماء وهو السميع العليم؛ ثلاث مراتٍ',
+                    'للّهُـمَّ إِنِّـي أَمسيتُ أُشْـهِدُك ، وَأُشْـهِدُ حَمَلَـةَ عَـرْشِـك ، وَمَلَائِكَتَكَ ، وَجَمـيعَ خَلْـقِك ، أَنَّـكَ أَنْـتَ اللهُ لا إلهَ إلاّ أَنْـتَ وَحْـدَكَ لا شَريكَ لَـك ، وَأَنَّ ُ مُحَمّـداً عَبْـدُكَ وَرَسـولُـك',
                     style: TextStyle(fontSize: 20),
                     textAlign: TextAlign.center,
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  const Text(
-                    'بسم الله يبْريك، ومن كل داءٍ يشفيك، ومن شرّ حاسدٍ إذا حسد، وشرّ كلّ ذي عينٍ',
-                    style: TextStyle(fontSize: 20),
-                    textAlign: TextAlign.center,
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  const Text(
-                    'بسم الله (ثلاثًا) أعوذ بالله وقدرته من شرّ ما أجد وأحاذر؛ سبع مراتٍ',
-                    style: TextStyle(fontSize: 20),
-                    textAlign: TextAlign.center,
-                  ),
-                  SizedBox(
-                    height: 10,
                   ),
                 ],
               ),

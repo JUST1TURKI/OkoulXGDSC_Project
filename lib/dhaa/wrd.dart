@@ -1,20 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Adhkar.dart';
+import 'package:flutter_application_1/PrayerScreen/dhaa.dart';
 
-import 'dhaa.dart';
-
-void main() {
-  runApp(const adkarMasa());
-}
-
-class adkarMasa extends StatefulWidget {
-  const adkarMasa({super.key});
+class wrd extends StatefulWidget {
+  const wrd({super.key});
 
   @override
-  State<adkarMasa> createState() => _adkarMasa();
+  State<wrd> createState() => _wrd();
 }
 
-class _adkarMasa extends State<adkarMasa> {
+class _wrd extends State<wrd> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -59,7 +53,7 @@ class _HomeState extends State<Home> {
                     bottomRight: Radius.circular(200),
                   ),
                   image: DecorationImage(
-                      alignment: Alignment.center,
+                      alignment: Alignment.centerLeft,
                       fit: BoxFit.cover,
                       image: AssetImage('assets/images/moshala.jpg'))),
               child: Column(children: [
@@ -69,7 +63,7 @@ class _HomeState extends State<Home> {
                     onPressed: () {
                       setState(() {
                         Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => Adhkar()));
+                            MaterialPageRoute(builder: (context) => dhaa()));
                       });
                     },
                     icon: const Icon(
@@ -82,7 +76,7 @@ class _HomeState extends State<Home> {
                   padding: const EdgeInsets.only(top: 70),
                   margin: const EdgeInsets.only(top: 70),
                   child: const Text(
-                    'اذكار المساء',
+                    'ورد',
                     style: TextStyle(fontFamily: 'Rakkas', fontSize: 60),
                   ),
                 ),
@@ -95,7 +89,7 @@ class _HomeState extends State<Home> {
                 children: [
                   Icon(Icons.layers),
                   const Text(
-                    'أَمْسَيْـنا وَأَمْسـى المـلكُ لله وَالحَمدُ لله ، لا إلهَ إلاّ اللّهُ وَحدَهُ لا شَريكَ لهُ، لهُ المُـلكُ ولهُ الحَمْـد، وهُوَ على كلّ شَيءٍ قدير ، رَبِّ أسْـأَلُـكَ خَـيرَ ما في هـذهِ اللَّـيْلَةِ وَخَـيرَ ما بَعْـدَهـا ، وَأَعـوذُ بِكَ مِنْ شَـرِّ ما في هـذهِ اللَّـيْلةِ وَشَرِّ ما بَعْـدَهـا ، ',
+                    'قُلْ هُوَ اللَّهُ أَحَدٌ، اللَّهُ الصَّمَدُ، لَمْ يَلِدْ وَلَمْ يُولَدْ، وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ',
                     style: TextStyle(fontSize: 20),
                     textAlign: TextAlign.center,
                   ),
@@ -103,7 +97,23 @@ class _HomeState extends State<Home> {
                     height: 10,
                   ),
                   const Text(
-                    'للّهُـمَّ إِنِّـي أَمسيتُ أُشْـهِدُك ، وَأُشْـهِدُ حَمَلَـةَ عَـرْشِـك ، وَمَلَائِكَتَكَ ، وَجَمـيعَ خَلْـقِك ، أَنَّـكَ أَنْـتَ اللهُ لا إلهَ إلاّ أَنْـتَ وَحْـدَكَ لا شَريكَ لَـك ، وَأَنَّ ُ مُحَمّـداً عَبْـدُكَ وَرَسـولُـك',
+                    'اللَّهُمَّ أَنْتَ السَّلَامُ وَمِنْكَ السَّلَامُ، تَبَارَكْتَ ذَا الجَلَالِ وَالإِكْرَامِ',
+                    style: TextStyle(fontSize: 20),
+                    textAlign: TextAlign.center,
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  const Text(
+                    'سمِ اللهِ الذي لا يضرُّ مع اسمِه شيءٌ في الأرضِ ولا في السماءِ وهو السميعُ العليمُ',
+                    style: TextStyle(fontSize: 20),
+                    textAlign: TextAlign.center,
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  const Text(
+                    'قُلْ أَعُوذُ بِرَبِّ النَّاسِ، مَلِكِ النَّاسِ، إِلَهِ النَّاسِ، مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ، الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ، مِنَ الْجِنَّةِ والناس',
                     style: TextStyle(fontSize: 20),
                     textAlign: TextAlign.center,
                   ),

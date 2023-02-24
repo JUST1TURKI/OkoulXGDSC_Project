@@ -1,5 +1,6 @@
-import 'dart:async';
+// ignore_for_file: avoid_print
 
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Register.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';

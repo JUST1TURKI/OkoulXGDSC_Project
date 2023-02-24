@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
-
+import '../adhkar/adkarMasa.dart';
+import '../adhkar/adkarSabah.dart';
 import 'PrayerScreen.dart';
-import 'adkarMasa.dart';
-import 'adkarSabah.dart';
-
-void main() {
-  runApp(const Adhkar());
-}
 
 class Adhkar extends StatefulWidget {
   const Adhkar({super.key});

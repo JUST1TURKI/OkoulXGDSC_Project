@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/wrd.dart';
+import '../dhaa/arkNafsek.dart';
+import '../dhaa/arkkherk.dart';
+import '../dhaa/wrd.dart';
 import 'PrayerScreen.dart';
-import 'arkNafsek.dart';
-import 'arkkherk.dart';
-
-void main() {
-  runApp(const dhaa());
-}
 
 // ignore: camel_case_types
 class dhaa extends StatefulWidget {
