@@ -1,6 +1,6 @@
 # Okoul X GDSC Project
 
-تطبيق مصلى لنحديد موعد اذان الصلوات حسب منطقتك بالاضافة الى مزايا اخرى مثل الاذكار والادعية
+تطبيق مصلى لتحديد موعد اذان الصلوات حسب منطقتك بالاضافة الى مزايا اخرى مثل الاذكار والادعية
 
 ## About the application
 <img width="200" alt="image" src="https://user-images.githubusercontent.com/117861968/221232369-13370e12-9deb-4c95-96f5-9d124b62d0f0.png">
