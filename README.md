@@ -3,8 +3,9 @@
 تطبيق مصلى لتحديد موعد اذان الصلوات حسب منطقتك بالاضافة الى مزايا اخرى مثل الاذكار والادعية
 
 ## About the application
-<img width="200" alt="image" src="https://user-images.githubusercontent.com/117861968/221232369-13370e12-9deb-4c95-96f5-9d124b62d0f0.png">
-<img width="212" alt="image" src="https://user-images.githubusercontent.com/117861968/221272349-17e2678a-5272-4b3f-8c8e-078112b7dadf.png">
+<img width="574" alt="image" src="https://user-images.githubusercontent.com/117861968/221655325-5a8f5a56-239e-45ba-93a4-1b82f1eb7d43.png">
+
+
 
 
 
